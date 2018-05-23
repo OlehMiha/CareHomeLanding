@@ -73,6 +73,23 @@ var close = false;
         offset: 80
     });
 
+//Tabs
+$(".tab_js." + $('.tabs_js.active').attr('data-tab')).fadeIn(200);
+$('.tabs_js').on('click', function (e) {
+    e.preventDefault();
+    if ($(this).hasClass('active')) {
+        return;
+    }
+
+    var class_tab = $(this).attr('data-tab');
+
+    $(".tabs_js").removeClass('active');
+    $(".tab_js").css('display','none');
+
+    $(".tab_js." + class_tab).fadeIn(400);
+    $(this).addClass('active');
+});
+
 
 //Меню топ скрол
     var h = $(window).height();
