@@ -1142,6 +1142,7 @@ section ul li:before {
 }
 .price_plan_row {
   margin: 0 auto;
+  margin-top: 66px;
   max-width: 1222px;
 }
 .price_plan {
@@ -1149,32 +1150,74 @@ section ul li:before {
 }
 
 .head_price {
-
+  min-height: 10px;
+  background: #d9d9da;
+  margin-bottom: 2px;
 }
 .card_price {
   background: #eff2f5;
+  text-align: center;
+  padding-top: 35px;
+  padding-bottom: 40px;
 }
 
 .card_price .title {
-  
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: rgb(37, 37, 37);
+  letter-spacing: 2.5px;
 }
+
 .card_price .price {
-  
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.750em;
+  color: #363636;
+  font-weight: bold;
+  position: relative;
 }
 .card_price .price span {
-
+  position: absolute;
+  top: 14px;
+  left: -18px;
+  font-size: 0.400em;
+  font-weight: 400;
 }
 .card_price .bot_text {
-
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: -13px;
+  min-height: 24px;
 }
 .card_price .com_text {
-
+  color: #7d7d7d;
+  font-size: 0.875em;
+  margin-top: 11px;
 }
 .card_price .lable_div {
-
+  height: 40px;
+  background: #d1d3d6;
+  color: #fff;
+  margin-top: 38px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.250em;
+  font-weight: 500;
+  padding-top: 5px;
+  text-transform: uppercase;
+}
+.card_price ol {
+  padding-top: 24px;
+}
+.card_price ol li {
+  font-size: 0.875em;
+  color: #0d094c;
+  margin-bottom: 13px;
+  letter-spacing: 0.65px;
 }
 
 .button_price {
+  margin-top: -5px;
   text-align: center;
 }
 
