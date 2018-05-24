@@ -90,6 +90,23 @@ $('.tabs_js').on('click', function (e) {
     $(this).addClass('active');
 });
 
+//Tabs
+$(".card_tile_js." + $('.click_tile_js.active').attr('data-card')).fadeIn(200);
+$('.click_tile_js').on('click', function (e) {
+    e.preventDefault();
+    if ($(this).hasClass('active')) {
+        return;
+    }
+
+    var class_tab = $(this).attr('data-card');
+
+    $(".click_tile_js").removeClass('active');
+    $(".card_tile_js").css('display','none');
+
+    $(".card_tile_js." + class_tab).fadeIn(400);
+    $(this).addClass('active');
+});
+
 
 //Меню топ скрол
     var h = $(window).height();
@@ -97,6 +114,38 @@ $('.tabs_js').on('click', function (e) {
     if ( ($(this).scrollTop()) > 0 ) {
         $(".menu_div").addClass('scroll');
     } 
+
+    $('.mov_tile_js').each(function(){
+        var imagePos = $(this).offset().top;
+        var topOfWindow = $(window).scrollTop();
+        if (imagePos < topOfWindow+h) {
+            $.each($(this).find('.iner_tile'), function(i, el) {
+                setTimeout(function() {
+                    $(el).addClass('animated flipInX')
+                }, 0 + (i * 250));
+
+              });
+        } else {
+            $(this).find('.iner_tile').removeClass('animated flipInX');
+        }
+    });
+
+    $('section ul').each(function(){
+        var imagePos = $(this).offset().top;
+        var topOfWindow = $(window).scrollTop();
+        if (imagePos < topOfWindow+h) {
+            $.each($(this).find('li'), function(i, el) {
+                setTimeout(function() {
+                    $(el).addClass('animated fadeIn')
+                }, 0 + (i * 250));
+
+              });
+        } else {
+            $(this).find('li').removeClass('animated fadeIn');
+        }
+    });
+
+
     $(window).scroll(function(){
         if ( ($(this).scrollTop()) > 0 ) {
             $(".menu_div").addClass('scroll');
@@ -115,6 +164,42 @@ $('.tabs_js').on('click', function (e) {
                 $(this).removeClass('animated fadeInUp');
             }
         });
+
+
+        $('.mov_tile_js').each(function(){
+            var imagePos = $(this).offset().top;
+            var topOfWindow = $(window).scrollTop();
+            if (imagePos < topOfWindow+h) {
+                $.each($(this).find('.iner_tile'), function(i, el) {
+                    setTimeout(function() {
+                        $(el).addClass('animated flipInX')
+                    }, 0 + (i * 250));
+
+                  });
+            } else {
+                $(this).find('.iner_tile').removeClass('animated flipInX');
+            }
+        });
+
+        $('section ul').each(function(){
+            var imagePos = $(this).offset().top;
+            var topOfWindow = $(window).scrollTop();
+            if (imagePos < topOfWindow+h) {
+                $.each($(this).find('li'), function(i, el) {
+                    setTimeout(function() {
+                        $(el).addClass('animated fadeIn')
+                    }, 0 + (i * 250));
+
+                  });
+            } else {
+                $(this).find('li').removeClass('animated fadeIn');
+            }
+        });
+
+
+
+
+
 
 
         $('.mov_next_fadeInLeft').each(function(){
@@ -188,9 +273,10 @@ $('.tabs_js').on('click', function (e) {
     });
     
 
+//Для мобильного 
     var width_el = Number(document.documentElement.clientWidth);
     if(width_el <= 768){
-        $('.item_block_1').removeClass('active');
+        
     }
 
 
