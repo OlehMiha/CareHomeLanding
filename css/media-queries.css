@@ -8,29 +8,119 @@
 
 }
 
-
-/* Экстрабольшие девайсы (большие десктопы, >= 1200px) */
-@media only screen and (max-width: 1200px) { 
-    .menu_top {
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-    }
-    .menu_top li {
-        margin-right: 0px;
-    }
-    
-}
-
-
-/* Большие девайсы (десктопы, <= 991px) */
-@media only screen and (max-width: 991px) { 
-
+@media only screen and (max-width:1430px) {
     .container {
         max-width: 100%;
     }
+    body{
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 1279px) { 
+    body{
+        font-size: 14px;
+    }
+    .title_block_div {
+        padding: 0;
+    }
+    .block_2_iner_absolute.left_block_2_iner .col {
+        margin: 0 15px;
+    }
+    .block_2_iner_absolute.right_block_2_iner .col {
+        margin: 0 15px;
+    }
+    .block_2_iner_absolute .col {
+        max-width: 100%;
+    }
+    .ico_block_1 .ico, .ico_block_1 .ico_block_1_r .ico {
+        margin-left: 0px;
+    }
+    .ico_block_1 .title,
+    .ico_block_1 .ico_block_1_r .title {
+        padding-left: 88px;
+        margin-right: 0px;
+    }
+    .ico_block_1 .text,
+    .ico_block_1 .ico_block_1_r .text {
+        padding-left: 88px;
+        padding-right: 0px;
+    }
+    .content_90 {
+        padding: 0 30px;
+    }
 
+    .block_3_row {
+        padding-left: 0px;
+    }
     
+    .how_it_works_div_l {
+        padding-left: 15px;
+    }
+
+    section ul li:before {
+        position: static;
+        content: "";
+        display: inline-block;
+        margin-right: 6px;
+        margin-bottom: 3px;
+        margin-left: -1px;
+    }
+    .block_4_r img, .block_4_l img {
+        margin: 0;
+    }
+    .tile_div_relative {
+        margin-left: 0px;
+        float: right;
+    }
+    .title_block_div .title_bot_2 {
+        max-width: 50%;
+    }
+    .left_block_5_div {
+        padding-left: 15px;
+    }
+    .iphone_app_img {
+        margin: 0 auto;
+        display: block;
+    }
+    .Logo {
+        width: 200px;
+        margin-top: 11px;
+    }
+    .menu_div.scroll .Logo {
+        margin-top: 12px;
+    }
+}
+
+/* Экстрабольшие девайсы (большие десктопы, >= 1200px) */
+@media only screen and (max-width: 1200px) { 
+    .Logo {
+        width: 140px;
+    }
+    .menu_top {
+        padding-left: 25px;
+    }
+
+    .header_block_iner {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 90px;
+    }
+    .button_header_div .button_1.sign_up {
+        margin-left: 10px;
+    }
+    .button_header_div {
+        width: 294px;
+    }
+
+    .price_plan, .card_blog {
+        max-width: 320px;
+    }
+}
+
+@media only screen and (max-width: 1100px) { 
+    body {
+        font-size: 13px;
+    }
     .menu_top {
         width: 100%;
         margin: 0;
@@ -42,21 +132,153 @@
     }
     .menu_top li {
         height: 60px;
-        /*display: none;*/
         margin: 0px;
-        font-size: 20px;
+        font-size: 1.429em;
         width: 100%;
-    }
-    .menu_top li a:after {
-        display: none;
     }
     .button_mobi_menu {
         display: block;
     }
+    .button_header_div {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
 
-   
+    .block_3_5 {
+        min-width: 100%;
+        margin-left: 0px;
+        margin-top: 40px;
+    }
+    .block_3_iner .text_content {
+        margin: 0 auto;
+        margin-top: 16px;
+    }
+    .block_3_iner .title_content {
+        text-align: center;
+    }
+    .block_3_iner a {
+        margin: 0 auto;
+        margin-top: 15px;
+        display: block;
+        text-align: center;
+    }
+    .store_bot a.apple_store {
+        margin-left: 10px;
+    }
+}
+@media only screen and (max-width: 1050px) { 
+    .price_plan, .card_blog {
+        max-width: 280px;
+    }
 }
 
+
+/* Большие девайсы (десктопы, <= 991px) */
+@media only screen and (max-width: 991px) { 
+
+    .block_2_iner_absolute.right_block_2_iner {
+        width: 100%;
+        height: calc(50% + 52px);
+        top: auto;
+        bottom: -52px;
+    }
+    .block_2_iner_absolute.left_block_2_iner  {
+        width: 100%;
+        height: calc(50% + 52px);
+        top: -52px;
+    }
+    .content_90 {
+        padding: 30px 15px;
+    }
+    .block_2_iner {
+        height: auto
+    }
+    .ico_block_1 .ico {
+        margin-top: 0px;
+    }
+
+    .title_block_div {
+        text-align: center;
+    }
+    .block_4_r img, .block_4_l img {
+        float: none;
+        margin: 30px auto;
+    }
+    .how_it_works_div {
+        height: auto;
+        padding: 30px 0;
+    }
+
+    .how_it_works_text {
+        order: 1;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .how_it_works_div .title {
+        text-align: center;
+    }
+    .title_block_div .title_bot_2 {
+        max-width: 500px;
+        margin: 0 auto;
+        margin-top: 19px;
+    }
+    .left_block_5_div {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .tile_div_relative {
+        position: static;
+        top: 0px;
+        width: 500px;
+        margin: 0 auto;
+        float: none;
+    }
+    .tile_div_all {
+        order: -1;
+    }
+    .card_block_5 .title {
+        text-align: center;
+    }
+    .card_block_5 .title:after {
+        margin: 0 auto;
+        margin-top: 17px;
+        margin-bottom: 11px;
+    }
+    .block_6 {
+        height: auto;
+        padding-bottom: 30px;
+    }
+    .iphone_div {
+        order: -1;
+        margin: 30px auto;
+    }
+}
+
+@media only screen and (max-width: 930px) { 
+    .price_plan, .card_blog {
+        max-width: 250px;
+    }
+
+    .footer_div .row .col {
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
+@media only screen and (max-width: 830px) { 
+    .price_plan, .card_blog {
+        max-width: 50%;
+        min-width: 50%;
+        margin: 0 25%;
+        margin-bottom: 30px;
+    }
+
+    .price_plan.price_plan_2 {
+        max-width: 60%;
+        min-width: 60%;
+        margin: 30px 20%;
+    }
+}
 /* Средние девайсы («таблетки», <= 767px) */
 @media only screen and (max-width: 767px) { 
     
