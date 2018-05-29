@@ -354,13 +354,20 @@
     .footer_div_bot .copy {
         text-align: center;
     }
+    .iner_tile p {
+        font-weight: bold;
+        font-size: 1em;
+        color: #fff;
+        line-height: 1.2;
+        letter-spacing: 0;
+    }
 }
 
 @media only screen and (max-width: 490px) {
    
 }
 @media only screen and (max-width: 400px) {
-   
+    
 }
 
 /* IPhone 5 */
