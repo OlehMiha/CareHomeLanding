@@ -228,9 +228,9 @@
     }
 
     .tile_div_relative {
-        position: static;
         top: 0px;
-        width: 500px;
+        width: 100%;
+        max-width: 500px;
         margin: 0 auto;
         float: none;
     }
@@ -253,6 +253,11 @@
         order: -1;
         margin: 30px auto;
     }
+
+    .block_2 {
+        padding: 0;
+        padding-bottom: 52px;
+    }
 }
 
 @media only screen and (max-width: 930px) { 
@@ -263,7 +268,19 @@
     .footer_div .row .col {
         min-width: 100%;
         max-width: 100%;
+        width: 100%;
+        text-align: center;
+        margin: 15px 0;
     }
+    .logo_color  {
+        float: none;
+        margin: 0 auto;
+        margin-bottom: 0px;
+    }
+    .store_bot a {
+        float: none;
+    }
+
 }
 @media only screen and (max-width: 830px) { 
     .price_plan, .card_blog {
@@ -281,12 +298,62 @@
 }
 /* Средние девайсы («таблетки», <= 767px) */
 @media only screen and (max-width: 767px) { 
-    
+    h1 {
+        font-size: 2.5em;
+        letter-spacing: 2.5px;
+        text-align: center;
+    }
+    .header_block {
+        height: 100vh;
+    }
+    .header_block_iner {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 30px;
+        text-align: center;
+    }
+    .block_3_iner {
+        min-width: 50%;
+        text-align: center;
+    }
+    .block_3_iner .text {
+        text-align: center;
+        display: block;
+        margin-bottom: 30px;
+    }
+    .block_3_5 {
+        margin-top: 10px;
+    }
 }
 
 /* Малые девайсы («ландшафтные телефоны», <= 575px) */
 @media only screen and (max-width: 575px) {
-    
+   body {
+        font-size: 12px;
+    }
+    .price_plan, .card_blog {
+        max-width: calc(100% - 30px);
+        min-width: calc(100% - 30px);
+        margin: 0 15px;
+        margin-bottom: 30px;
+    }
+    .price_plan.price_plan_2 {
+        max-width: 100%;
+        min-width: 100%;
+        margin: 30px 0;
+    }
+    .footer_div_bot a {
+        margin-right: 15px;
+    }
+    .footer_div_bot .row .col {
+        min-width: 100%;
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+    }
+    .footer_div_bot .copy {
+        text-align: center;
+    }
 }
 
 @media only screen and (max-width: 490px) {
