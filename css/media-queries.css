@@ -324,6 +324,23 @@
     .block_3_5 {
         margin-top: 10px;
     }
+    .iphone_app_img {
+        max-width: 60%;
+    }
+
+    .block_4, .block_7 {
+        min-height: auto;
+        padding-top: 30px;
+    }
+    .block_1, .block_3, .block_5, .block_7,.block_8 {
+        background: #fefefe;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .price_plan.price_plan_2 {
+        margin-bottom: 0;
+    }
+
 }
 
 /* Малые девайсы («ландшафтные телефоны», <= 575px) */
