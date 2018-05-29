@@ -90,7 +90,7 @@ $('.tabs_js').on('click', function (e) {
     $(this).addClass('active');
 });
 
-//Tabs
+//cards
 $(".card_tile_js." + $('.click_tile_js.active').attr('data-card')).fadeIn(200);
 $('.click_tile_js').on('click', function (e) {
     e.preventDefault();
@@ -206,28 +206,19 @@ $('.click_tile_js').on('click', function (e) {
             var imagePos = $(this).offset().top;
             var topOfWindow = $(window).scrollTop();
             if (imagePos < topOfWindow+h) {
-                $.each($(this).find('p'), function(i, el) {
-                    setTimeout(function() {
-                        $(el).addClass('animated fadeInLeft')
-                    }, 0 + (i * 250));
-
-                  });
+                $(this).addClass('animated fadeInLeft');
             } else {
-                $(this).find('p').removeClass('animated fadeInLeft');
+                $(this).removeClass('animated fadeInLeft');
             }
         });
+
         $('.mov_next_fadeInRight').each(function(){
             var imagePos = $(this).offset().top;
             var topOfWindow = $(window).scrollTop();
             if (imagePos < topOfWindow+h) {
-                $.each($(this).find('div'), function(i, el) {
-                    setTimeout(function() {
-                        $(el).addClass('animated fadeInRight')
-                    }, 0 + (i * 150));
-
-                  });
+                $(this).addClass('animated fadeInRight');
             } else {
-                $(this).find('div').removeClass('animated fadeInRight');
+                $(this).removeClass('animated fadeInRight');
             }
         });
 
@@ -246,12 +237,14 @@ $('.click_tile_js').on('click', function (e) {
             var imagePos = $(this).offset().top;
             var topOfWindow = $(window).scrollTop();
             if (imagePos < topOfWindow+h) {
-                var el = $(this);
-                setTimeout(function() {
+                $.each($(this).find('div.col-12'), function(i, el) {
+                    setTimeout(function() {
                         $(el).addClass('animated fadeIn');
-                    }, 500);
+                    }, 0 + (i * 500));
+
+                  });
             } else {
-                $(this).removeClass('animated fadeIn');
+                $(this).find('div.col-12').removeClass('animated fadeIn');
             }
         });
 
@@ -260,14 +253,14 @@ $('.click_tile_js').on('click', function (e) {
             var imagePos = $(this).offset().top;
             var topOfWindow = $(window).scrollTop();
             if (imagePos < topOfWindow+h) {
-                $.each($(this).find('div'), function(i, el) {
+                $.each($(this).find('div.col'), function(i, el) {
                     setTimeout(function() {
                         $(el).addClass('animated fadeInLeft');
                     }, 0 + (i * 80));
 
                   });
             } else {
-                $(this).find('div').removeClass('animated fadeInLeft');
+                $(this).find('div.col').removeClass('animated fadeInLeft');
             }
         });
     });
