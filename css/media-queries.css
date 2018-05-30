@@ -408,6 +408,9 @@
     .block_3_5 {
         margin-top: 10px;
     }
+    .iphone_div {
+        max-height: 100%;
+    }
     .iphone_app_img {
         max-width: 60%;
     }
