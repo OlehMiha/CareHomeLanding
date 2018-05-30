@@ -1133,6 +1133,10 @@ section ul li:before {
   background: url("../img/google-play.png") no-repeat;
   background-position: left center;
 }
+
+.iphone_div {
+    max-height: 100%;
+}
 .iphone_app_img {
     position: relative;
     max-width: 100%;
