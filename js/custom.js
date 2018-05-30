@@ -108,52 +108,14 @@ $('.click_tile_js').on('click', function (e) {
 });
 
 
-//Меню топ скрол
+//Меню топ : скрол анимация
     var h = $(window).height();
  
     if ( ($(this).scrollTop()) > 0 ) {
         $(".menu_div").addClass('scroll');
     } 
 
-    $('.mov_tile_js').each(function(){
-        var imagePos = $(this).offset().top;
-        var topOfWindow = $(window).scrollTop();
-        if (imagePos < topOfWindow+h) {
-            $.each($(this).find('.iner_tile'), function(i, el) {
-                setTimeout(function() {
-                    $(el).addClass('animated flipInX')
-                }, 0 + (i * 250));
-
-              });
-        } else {
-            $(this).find('.iner_tile').removeClass('animated flipInX');
-        }
-    });
-
-    $('section ul').each(function(){
-        var imagePos = $(this).offset().top;
-        var topOfWindow = $(window).scrollTop();
-        if (imagePos < topOfWindow+h) {
-            $.each($(this).find('li'), function(i, el) {
-                setTimeout(function() {
-                    $(el).addClass('animated fadeIn')
-                }, 0 + (i * 250));
-
-              });
-        } else {
-            $(this).find('li').removeClass('animated fadeIn');
-        }
-    });
-
-
-    $(window).scroll(function(){
-        if ( ($(this).scrollTop()) > 0 ) {
-            $(".menu_div").addClass('scroll');
-        } 
-        if ( $(this).scrollTop() == 0 ) {
-            $(".menu_div").removeClass('scroll');
-        }
-
+    function go_animated_scroll() {
 
         $('.mov_next_fadeInUp').each(function(){
             var imagePos = $(this).offset().top;
@@ -240,7 +202,7 @@ $('.click_tile_js').on('click', function (e) {
                 $.each($(this).find('div.col-12'), function(i, el) {
                     setTimeout(function() {
                         $(el).addClass('animated fadeIn');
-                    }, 0 + (i * 500));
+                    }, 0 + (i * 300));
 
                   });
             } else {
@@ -262,7 +224,20 @@ $('.click_tile_js').on('click', function (e) {
             } else {
                 $(this).find('div.col').removeClass('animated fadeInLeft');
             }
-        });
+        }); 
+    }
+
+    go_animated_scroll();
+
+    $(window).scroll(function(){
+        if ( ($(this).scrollTop()) > 0 ) {
+            $(".menu_div").addClass('scroll');
+        } 
+        if ( $(this).scrollTop() == 0 ) {
+            $(".menu_div").removeClass('scroll');
+        }
+
+        go_animated_scroll();
     });
     
 

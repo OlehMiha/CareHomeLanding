@@ -75,6 +75,9 @@
     .title_block_div .title_bot_2 {
         max-width: 50%;
     }
+    .request .title_block_div .title_bot_2 {
+        max-width: 100%;
+    }
     .left_block_5_div {
         padding-left: 15px;
     }
@@ -114,6 +117,16 @@
 
     .price_plan, .card_blog {
         max-width: 320px;
+    }
+    .request .header_block_iner {
+        padding-left: 15px;
+    }
+    .form_request_page {
+        padding: 50px 30px;
+    }
+
+    .row_blog {
+        margin: 0 -15px;
     }
 }
 
@@ -258,6 +271,70 @@
         padding: 0;
         padding-bottom: 52px;
     }
+
+    .block_2 p.block_2_iner_text {
+        position: absolute;
+        bottom: calc(50% - 15px);
+        left: 0;
+    }
+
+
+    .contacts_form {
+        float: none;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .contacts_right_div {
+        text-align: center;
+        padding-left: 0px;
+        margin: 0 auto;
+    }
+
+
+
+    .request .header_block_iner {
+        text-align: center;
+    }
+    .request .header_block {
+        height: auto;
+    }
+    .form_request_page {
+        padding: 50px 30px;
+        margin: 0 auto;
+        float: none;
+        margin-top: 30px;
+        margin-bottom: -130px;
+    }
+    .request .title_mid {
+        margin: 0 auto;
+        max-width: 500px;
+    }
+    .request .title_bot {
+        margin: 0 auto;
+        max-width: 500px;
+        margin-top: 60px;
+    }
+    .request .title_block_div {
+        padding-right: 15px;
+    }
+
+    .block_11 {
+        height: auto;
+        padding-top: 130px;
+    }
+    .request .iphone_app_img {
+        float: none;
+        margin: 0px auto;
+    }
+    .request .title_block_div .title {
+        margin-top: 30px;
+    }
+    .request .title_block_div {
+        padding:0 15px;
+    }
+    .request .title_block_div .title_bot_2 {
+        padding-right: 0px;
+    }
 }
 
 @media only screen and (max-width: 930px) { 
@@ -295,6 +372,10 @@
         min-width: 60%;
         margin: 30px 20%;
     }
+    .block_2 p.block_2_iner_text {
+        letter-spacing: 10px;
+        font-size: 5em;
+    }
 }
 /* Средние девайсы («таблетки», <= 767px) */
 @media only screen and (max-width: 767px) { 
@@ -311,6 +392,9 @@
         padding-right: 15px;
         padding-top: 30px;
         text-align: center;
+    }
+    .request .header_block_iner {
+        padding-top: 90px;
     }
     .block_3_iner {
         min-width: 50%;
@@ -379,11 +463,20 @@
     }
 }
 
-@media only screen and (max-width: 490px) {
+@media only screen and (max-width: 460px) {
    
+    .block_2 p.block_2_iner_text {
+        letter-spacing: 7px;
+        font-size: 4em;
+    }
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 360px) {
     
+    .block_2 p.block_2_iner_text {
+        letter-spacing: 5px;
+        font-size: 3.5em;
+    }
+
 }
 
 /* IPhone 5 */
