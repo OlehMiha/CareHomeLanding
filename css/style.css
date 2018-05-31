@@ -1493,6 +1493,7 @@ section ul li:before {
   background: url('../img/Logo_color.png') no-repeat;
   background-position: center;
   background-size: contain;
+  margin-top: 0;
 }
 
 .store_bot a {
