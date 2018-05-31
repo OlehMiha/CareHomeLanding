@@ -120,7 +120,7 @@ $('.click_tile_js').on('click', function (e) {
         $('.mov_next_fadeInUp').each(function(){
             var imagePos = $(this).offset().top;
             var topOfWindow = $(window).scrollTop();
-            if (imagePos < topOfWindow+h) {
+            if (imagePos < topOfWindow+h+250) {
                 $(this).addClass('animated fadeInUp');
             } else {
                 $(this).removeClass('animated fadeInUp');
