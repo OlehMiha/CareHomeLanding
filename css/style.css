@@ -252,11 +252,11 @@ h1 {
   background: transparent;    
   margin-top: 3px;
 
-  -webkit-transition: height .5s;
-  -moz-transition: height .5s;
-  -ms-transition: height .5s;
-  -o-transition: height .5s;
-  transition: height .5s;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -ms-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
   z-index: 11000;
 }
 /*.menu_div.scroll {
@@ -307,11 +307,11 @@ h1 {
   background: #eff2f5;
   height: auto;
   padding-bottom: 10px;
-  -webkit-transition: height .5s;
-  -moz-transition: height .5s;
-  -ms-transition: height .5s;
-  -o-transition: height .5s;
-  transition: height .5s;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -ms-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
 }
 .menu_div.scroll .menu_top li a {
   color: rgb(37, 37, 37);
