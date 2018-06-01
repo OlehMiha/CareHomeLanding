@@ -1,0 +1,17 @@
+/*
+ Theme Name:   CareHome
+ Theme URI:    http://carehome.com
+ Description:  CareHome Theme
+ Author:       Miha Oleh
+ Author URI:   https://vk.com/id12194648
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         white, blue, blog, landing page, responsive, contacts form
+ Text Domain:  http://carehome.testoleh.pp.ua/
+*/
+@import "css/style.css";
+
+.customize-support .menu_div.scroll {
+    top: 32px;
+}

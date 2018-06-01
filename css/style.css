@@ -375,7 +375,7 @@ h1 {
 }
 
 
-.menu_top  li.active a,.menu_top  li a.mPS2id-highlight {
+.menu_top  li.current_page_item a,.menu_top  li.active a,.menu_top  li a.mPS2id-highlight {
   color: #4a90e2;
 }
 .menu_top li:hover a  {
