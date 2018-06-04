@@ -1,13 +1,28 @@
 <?php get_header();?>
     <!-- Header block -->
-    <section class="header_block">
+    <section class="header_block" style="<?php if(get_field('height_100%_header_block')) { ?>
+        height: 100vh;
+    <?php } 
+    if( $background_header_block = get_field('background_header_block') ) { ?>
+        background: url('<?php echo $background_header_block["url"]?>') no-repeat;
+        background-position: center;
+        background-size: cover; 
+    <?php } ?>">
+
         <div class="container">
 
             <div class="row align-items-center">
 
                 <div class="col-12 header_block_iner mov mov_zoomIn_start">
-                    <h1>Essential workforce management system, designed for care homes</h1>
-                    <a href="request.html" class="button_0 button_2 align-items-center justify-content-center">Request Demo</a>
+
+                    <?php if( $title_header_block = get_field('title_header_block') ) { ?>
+                        <h1><?php echo $title_header_block; ?></h1>
+                    <?php } ?>
+
+                    <?php if( $button_text_header_block = get_field('button_text_header_block') ) { ?>
+                      <a href="<?php echo home_url(); ?>/request" class="button_0 button_2 align-items-center justify-content-center"><?php echo $button_text_header_block; ?></a>  
+                    <?php } ?>
+                    
                 </div>
 
             </div>
@@ -19,78 +34,56 @@
         <div class="container">
             
             <div class="title_block_div">
-                <p class="title_top">OUR BENEFITS</p>
-                <p class="title">Why use <span>carehome schedule?</span></p>
+            <?php if( $title_top_block_1 = get_field('title_top_block_1') ) { ?>
+                <p class="title_top"><?php echo $title_top_block_1; ?></p>
+            <?php } ?>
+            
+            <?php if( $title_block_1 = get_field('title_block_1') ) { ?>
+                <p class="title"><?php echo $title_block_1; ?></p>
+            <?php } ?>
+
+            <?php if( $title_bot_block_1 = get_field('title_bot_block_1') ) { ?>
+                <p class="title_bot"><?php echo $title_block_1; ?></p>
+            <?php } ?>
+
             </div>
 
+            <?php if(have_rows('why_use_blocks')): ?>
             <div class="row ico_block_1 mov_div mov_next_fadeIn_timeOut">
 
-                <div class="col-12 col-lg-6 ico_block_1_l">
-                    <div class="ico ico_1"></div>
-                    <p class="title">
-                        Smarter workforce planning decisions
-                    </p>
-                    <p class="text">
-                        Carehome Schedule empowers management to understand structure of their workforce, thus allowing better decision making.
-                    </p>
-                </div>
+                <?php 
+                $count_while = 0;
+                while( have_rows('why_use_blocks') ): the_row(); 
+                    // vars
+                    $count_while++;
+                    $img = get_sub_field('img');
+                    $title = get_sub_field('title');
+                    $text = get_sub_field('text');
+                ?>
 
-                <div class="col-12 col-lg-6 ico_block_1_r">
-                    <div class="ico ico_2"></div>
-                    <p class="title">
-                        Greater Visibility and control
-                    </p>
-                    <p class="text">
-                        Whether single or multiple care homes, Carehome Schedule gives you greater insights to operations per care home.
-                    </p>
-                </div>
+                    <?php if( $img && $title && $text ): ?>
 
-                <div class="col-12 col-lg-6 ico_block_1_l">
-                    <div class="ico ico_3"></div>
-                    <p class="title">
-                        Save time & effort
-                    </p>
-                    <p class="text">
-                        Carehome Schedule reduces the time and effort spent managing a rota by automating the fulfilment process.
-                        Spend less time booking shifts and more time delivering quality care to service users.
-                    </p>
-                </div>
+                    <div class="col-12 col-lg-6 ico_block_1_<?php echo ($count_while % 2 == 0) ? 'r' : 'l' ?>">
+                        <div class="ico" style="
+                        background: url('<?php echo $img["url"]?>') no-repeat;background-position: center;"></div>
+                        <p class="title">
+                            <?php echo $title ?>
+                        </p>
+                        <p class="text">
+                            <?php echo $text ?>
+                        </p>
+                    </div>
 
-                <div class="col-12 col-lg-6 ico_block_1_r">
-                    <div class="ico ico_4"></div>
-                    <p class="title">
-                        Simple and easy to use
-                    </p>
-                    <p class="text">
-                        Very intuitive design means you will be up and running within minutes with minimal training.
-                    </p>
-                </div>
+                    <?php endif; ?>
 
-                <div class="col-12 col-lg-6 ico_block_1_l">
-                    <div class="ico ico_5"></div>
-                    <p class="title">
-                        Reduce your costs
-                    </p>
-                    <p class="text">
-                        Accurate time tracking for all staff, including locum staff and no more double bookings.<br>
-                        Reduce printing costs.
-                    </p>
-                </div>
-
-                <div class="col-12 col-lg-6 ico_block_1_r">
-                    <div class="ico ico_6"></div>
-                    <p class="title">
-                        Easier reconciliation
-                    </p>
-                    <p class="text">
-                        Faster reconciliation through electronic timesheets and auto generated invoices, while payroll function allows easier integration with accounting systems.
-                    </p>
-                </div>
+                <?php endwhile; ?>
 
             </div>
+            <?php endif; ?>
+
         </div>
     </section>
-
+ 
     <!-- Block 2 -->
     <section id="m2" class="block_2">
         <div class="block_2_iner">
@@ -98,30 +91,49 @@
                 CAREHOME
             </p>
 
-            <div class="block_2_iner_absolute left_block_2_iner tab_js tab_2">
+            <div class="block_2_iner_absolute left_block_2_iner tab_js tab_2" style="<?php if( $img_left = get_field('img_left') ) { ?>
+                background: url('<?php echo $img_left["url"]?>') no-repeat;
+                background-position: center;
+                background-size: cover; 
+            <?php } ?>">
                 <div class="row justify-content-end align-items-center">
 
                     <div class="col">
-                        <div class="title">Our Vision</div>
-                        <p>
-                            Our Vision is to create technology that will make every care home a great place to work.
-                        </p>
-                        <a href="#" class="button_0 button_2 align-items-center justify-content-center tabs_js active" data-tab="tab_1">KNOW MORE</a>
-                        
+                        <?php if( $title_left_block_2 = get_field('title_left_block_2') ) { ?>
+                            <div class="title"><?php echo $title_left_block_2; ?></div>
+                        <?php } ?>
+
+                        <?php if( $text_preview_left = get_field('text_preview_left') ) { ?>
+                            <p><?php echo $text_preview_left; ?></p>
+                        <?php } ?>
+
+                        <?php if( $text_button_left = get_field('text_button_left') ) { ?>
+                            <a href="#" class="button_0 button_2 align-items-center justify-content-center tabs_js active" data-tab="tab_1"><?php echo $text_button_left; ?></a>
+                        <?php } ?>
                     </div>
 
                 </div>
             </div>
 
-            <div class="block_2_iner_absolute right_block_2_iner tab_js tab_1">
+            <div class="block_2_iner_absolute right_block_2_iner tab_js tab_1" style="<?php if( $img_left_right = get_field('img_left_right') ) { ?>
+                background: url('<?php echo $img_left_right["url"]?>') no-repeat;
+                background-position: center;
+                background-size: cover; 
+            <?php } ?>">
                 <div class="row justify-content-start align-items-center">
 
                     <div class="col">
-                        <div class="title">Mission Statement</div>
-                        <p>
-                            Carehome Schedule is the leading workforce management platform in the carehome sector.
-                        </p>
-                        <a href="#" class="button_0 button_2 align-items-center justify-content-center tabs_js" data-tab="tab_2">KNOW MORE</a>
+                        <?php if( $title_right_block_2 = get_field('title_right_block_2') ) { ?>
+                            <div class="title"><?php echo $title_right_block_2; ?></div>
+                        <?php } ?>
+
+                        <?php if( $text_preview_right = get_field('text_preview_right') ) { ?>
+                            <p><?php echo $text_preview_right; ?></p>
+                        <?php } ?>
+
+                        <?php if( $text_button_right = get_field('text_button_right') ) { ?>
+                            <a href="#" class="button_0 button_2 align-items-center justify-content-center tabs_js" data-tab="tab_2"><?php echo $text_button_right; ?></a>
+                        <?php } ?>
                     </div>
 
                 </div>
@@ -132,21 +144,28 @@
 
                 <div class="row align-items-center">
                     <div class="col-12 col-lg-6 content_90">
-                        <div class="title">
-                            Our Vision
-                        </div>
-                        <p>
-                            Our Vision is to create technology that will make every care home a great place to work. We believe that great technology can transform any workplace and support employees to achieve their goals, leading to greater worker satisfaction. We believe that a happier and motivated workforce will lead to better service and care for service users, thus leading to best outcomes for all stakeholders. Hence we are motivated to keep learning, keep seeking better understanding, keep dreaming of better technology and bring it to reality.
-                        </p>
+                        <?php if( $title_left_block_2 = get_field('title_left_block_2') ) { ?>
+                            <div class="title"><?php echo $title_left_block_2; ?></div>
+                        <?php } ?>
+
+                        <?php if( $text_left = get_field('text_left') ) { ?>
+                            <p>
+                                <?php echo $text_left; ?>
+                            </p>
+                        <?php } ?>
                     </div>
 
                     <div class="col-12 col-lg-6 content_90">
-                        <div class="title">
-                            Mission Statement
-                        </div>
-                        <p>
-                            Carehome Schedule is the leading workforce management platform in the carehome sector. Whether your company has single or multiple sites, Carehome Schedule is specifically designed for companies of every size in order to simplify the management process and support the growth of your business. Carehome Schedule offers the most innovative employee scheduler, workforce management and reporting system supported by our smart Clock-in/out, availability manager, messaging  and payroll systems to transform the care home management process.
-                        </p>            
+                        
+                        <?php if( $title_right_block_2 = get_field('title_right_block_2') ) { ?>
+                            <div class="title"><?php echo $title_right_block_2; ?></div>
+                        <?php } ?>
+                        
+                        <?php if( $text_right = get_field('text_right') ) { ?>
+                            <p>
+                                <?php echo $text_right; ?>
+                            </p>
+                        <?php } ?>          
 
                     </div>
                 </div>
@@ -160,8 +179,18 @@
         <div class="container">
             
             <div class="title_block_div">
-                <p class="title_top">STEPS</p>
-                <p class="title">Staff management shouldn’t be a burden </p>
+            <?php if( $title_top_block_3 = get_field('title_top_block_3') ) { ?>
+                <p class="title_top"><?php echo $title_top_block_3; ?></p>
+            <?php } ?>
+            
+            <?php if( $title_block_3 = get_field('title_block_3') ) { ?>
+                <p class="title"><?php echo $title_block_3; ?></p>
+            <?php } ?>
+
+            <?php if( $title_bot_block_3 = get_field('title_bot_block_3') ) { ?>
+                <p class="title_bot"><?php echo $title_block_3; ?></p>
+            <?php } ?>
+
             </div>
 
             <div class="row block_3_row mov_div mov_slideInLeft">

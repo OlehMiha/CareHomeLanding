@@ -78,8 +78,8 @@ add_theme_support('post-thumbnails');
 //Боковая панель
 if( function_exists('acf_add_options_page')){
     acf_add_options_page(array(
-		'page_title' 	=> 'Phone & Social links',
-		'menu_title'	=> 'Phone & Social links',
+		'page_title' 	=> 'Footer',
+		'menu_title'	=> 'Footer',
 		'menu_slug' 	=> 'theme-general-settings',
         'capability'    => 'edit_posts',
 		'icon_url'	=> 'dashicons-share-alt2',
