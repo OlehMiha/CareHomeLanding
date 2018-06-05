@@ -19,6 +19,9 @@ function register_styles() {
     wp_register_style('animate.css', get_template_directory_uri() . '/css/animate.css');
     wp_enqueue_style('animate.css');
 
+    wp_register_style('jquery.mCustomScrollbar.css', get_template_directory_uri() . '/css/jquery.mCustomScrollbar.css');
+    wp_enqueue_style('jquery.mCustomScrollbar.css');
+
     wp_register_style('style', get_template_directory_uri() . '/style.css');
     wp_enqueue_style('style');
 
@@ -50,6 +53,9 @@ function load_my_style_script_footer() {
     wp_register_script('jquery.malihu.PageScroll2id.min.js', get_template_directory_uri() . '/js/jquery.malihu.PageScroll2id.min.js');
     wp_enqueue_script('jquery.malihu.PageScroll2id.min.js');
     
+    wp_register_script('jquery.mCustomScrollbar.concat.min.js', get_template_directory_uri() . '/js/jquery.mCustomScrollbar.concat.min.js');
+    wp_enqueue_script('jquery.mCustomScrollbar.concat.min.js');
+    
     wp_register_script('custom.js', get_template_directory_uri() . '/js/custom.js');
     wp_enqueue_script('custom.js');
 }
@@ -78,8 +84,8 @@ add_theme_support('post-thumbnails');
 //Боковая панель
 if( function_exists('acf_add_options_page')){
     acf_add_options_page(array(
-		'page_title' 	=> 'Footer',
-		'menu_title'	=> 'Footer',
+		'page_title' 	=> 'Header & Footer',
+		'menu_title'	=> 'Header & Footer',
 		'menu_slug' 	=> 'theme-general-settings',
         'capability'    => 'edit_posts',
 		'icon_url'	=> 'dashicons-share-alt2',

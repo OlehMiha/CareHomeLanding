@@ -1933,8 +1933,13 @@ article img {
   margin-bottom: 21px;
 }
 
-
-
+.block_content_page article {
+  padding: 30px 0;
+}
+.header_none_bac_menu {
+  height: 90px; 
+  background: #363636;
+}
 
 /* Form */
 .form_input_0 {
@@ -1994,126 +1999,48 @@ input.form_input_0:focus:required:invalid {
   max-width: 530px;
   margin-top: 100px;
 }
-.modal-body_1 {
-  padding-top: 33px;
-  padding-left: 30px;
-  padding-right: 27px;
-  padding-bottom: 30px;
+.modal-body_1 {    
+  padding: 30px 20px;
+  padding-right: 10px;
   height: 100%;
-  text-align: center;
-  background-position: center;
   text-align: center;
   border-radius: 5px;
 }
-.left_modal {
-  width: 39%;
-  height: 368px;
-  float: left;
-}
-
-.right_modal {
-  width: 61%;
-  float: right;
-}
-.modal .modal-dialog_2 .right_modal{
-  width: 100%;
-}
-.men_modal{
-  background: url('../img/men_modal.png') no-repeat;
-  background-position: left bottom;
-}
 .modal .close {
   position: absolute;
-  top: 1px;
-  right: 1px;
+  top: 5px;
+  right: 5px;
   width: 30px;
   height: 30px;
   text-align: center;
   opacity: 1;
+  font-size: 1.125em;
+  color: #222;
 }
 .modal .close:hover {
   opacity: 0.8;
 }
 
-.modal h6{    
+.modal .title {    
   text-transform: uppercase;
-  color: #353854;
-  margin-bottom: 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: rgb(37, 37, 37);
+  letter-spacing: 2.5px;
+  margin-bottom: 15px;
 }
-
-.title_modal {
-  color: rgb(153, 153, 153);
-  line-height: 1.111;
-  margin-bottom: 25px;
-}
-.modal-body1 .w_me {
-  width: 100%;
-}
-
-
-.modal-body1 .button_form {
-  padding-top: 0;
-  margin-top: 20px;
-}
-.modal_bot_text {
-  color: rgb(153, 153, 153);
-  line-height: 1.143;
-  margin-top: 7px;
-}
-
-.form_input_2 {
-  padding: 0;
-  width: 100%;
-  height: 52px;
-  background: #fafbfc;
-  border: 1px solid #dde4ea;
-  border-radius: 3px;
+.modal .content_modal_iner p {    
+  color: #0d094c;
+  font-size: 1.125em;
+  font-weight: 300;
   margin-bottom: 10px;
-  text-align: center;
-  color:#999; 
+  letter-spacing: 0.2px;
+  line-height: 1.65;
+  text-align: left;
 }
-
-.button_form_modal{
-  cursor: pointer;
-  border: none;
-  border-radius: 3px;
-  width: 100%;
-}
-
-
-#sps h6{    
-  margin-top: 50px;
-  margin-bottom: 0px;
-}
-#sps h6.green{
-  text-transform: uppercase;
-  color: #f6901f;
-  margin-top: 0px;
-  margin-bottom: 14px;
-}
-#sps .title_modal {
-  color: rgb(153, 153, 153);
-  line-height: 1.111;
-  margin: 0 auto;
-  margin-top: 32px;
-  margin-bottom: 25px;
-  max-width: 280px;
-}
-.girl_modal{    
+.custom_scrollbar {
   height: 300px;
-  width: 360px;
-  background: url(../img/ModalGirl.png) no-repeat;
-  background-position: center bottom;
-  margin-right: -60px;
-}
-.a_modal_back {
-  color: #1b1b1b;
-  font-weight: 500;
-  text-decoration: underline;
-}
-.a_modal_back:hover {
-  color: #1b1b1b;
-  text-decoration: none;
+  overflow: auto;
 }
 
 

@@ -1,26 +1,15 @@
 //Прелодер и первичные анимации
-$(window).on('load', function () {
+(jQuery)(document).ready(function($){ 
         var $preloader = $('.volosunov'),
             $spinner = $preloader.find('.spinner');
         $spinner.delay(650).fadeOut('slow');
         $preloader.delay(650).fadeOut('slow');
-        $('.mov_fadeIn_start').addClass('animated fadeIn');
-        $('.mov_fadeIn_start').css("opacity","1");
-        $('.mov_fadeInUp_start').addClass('animated fadeInUp');
         $('.mov_zoomIn_start').css("opacity","1");
         $('.mov_zoomIn_start').addClass('animated zoomIn');
-        $('.load_active').addClass('active');
-
-          $.each($('.mov1_left_one_by_one_start p'), function(i, el) {
-            setTimeout(function() {
-                $(el).addClass('animated fadeInLeft')
-            }, 0 + (i * 300));
-
-          });
     });
 
 
-$(document).ready(function(){ 
+(jQuery)(document).ready(function($){ 
 //Отключить выделение
     window.oncontextmenu = function() {
         return false;
@@ -32,8 +21,8 @@ $(document).ready(function(){
     },false);
     
 
-//Меню топ  
-var close = false;
+    //Меню топ  
+    var close = false;
     $(".button_mobi_menu").on('click', function () {
         if ($(this).hasClass('active')) {
             $('.button_mobi_menu').removeClass("active");
@@ -255,83 +244,9 @@ $('.click_tile_js').on('click', function (e) {
     $("#sps").on("click","div", function () {
             $('#sps').modal('toggle');
      });
-
-
-    $("#manedj_form").submit(function() {
-
-        var th = $(this);
-        $.ajax({
-            type: "POST",
-            url: "zakaz.php", 
-            data: th.serialize()
-        }).done(function() {
-            
-            th.trigger("reset");
-            $('#exampleModal_1').modal('toggle');
-            setTimeout(function() {
-                $('#sps').modal('toggle');
-            },250);
-        });
-        return false;
+    //Page Custom Scrollbar
+    $(".custom_scrollbar").mCustomScrollbar({
+       theme:"dark-3"
     });
-
-    
-    $("#perezvon_form").submit(function() {
-
-        var th = $(this);
-        $.ajax({
-            type: "POST",
-            url: "zakaz.php", 
-            data: th.serialize()
-        }).done(function() {
-            
-            th.trigger("reset");
-            $('#exampleModal_2').modal('toggle');
-            setTimeout(function() {
-                $('#sps').modal('toggle');
-            },250);
-        });
-        return false;
-    });
-
-    $("#katalog_form").submit(function() {
-
-        var th = $(this);
-        $.ajax({
-            type: "POST",
-            url: "zakaz.php", 
-            data: th.serialize()
-        }).done(function() {
-            
-            th.trigger("reset");
-            $('#exampleModal_3').modal('toggle');
-            setTimeout(function() {
-                $('#sps').modal('toggle');
-            },250);
-        });
-        return false;
-    });
-
-    $("#vopros_form").submit(function() {
-
-        var th = $(this);
-        $.ajax({
-            type: "POST",
-            url: "vopros.php", 
-            data: th.serialize()
-        }).done(function() {
-            
-            th.trigger("reset");
-            $('.button_form_vopros').addClass('good');
-            $('.button_form_vopros').text('Вопрос отправлен!');
-            $('.button_form_vopros').attr('disabled',true);
-
-        });
-        return false;
-    });
-
-
-	
-	
 
 });

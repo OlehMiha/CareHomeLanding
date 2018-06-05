@@ -143,7 +143,10 @@
   
        </head>
 
-    <body class="body_my">
+    <body class="body_my <?php 
+    if( !(is_front_page() || is_page_template('templates/index-template.php') || is_page_template('templates/request-template.php')) ) {echo "contacts";}
+    if( is_page_template('templates/request-template.php') ) {echo "request";}
+     ?>">
         <!-- PRELOADER -->
         <div class="volosunov"> 
             <span class="spinner">
@@ -166,8 +169,24 @@
             <div class="menu_div_off"></div>
             <nav class="menu_div"> 
                 <div class="container">
-
+                  <?php 
+                  $logo_black_header = get_field('logo_black_header', 'option'); 
+                  $logo_color_header = get_field('logo_color_header', 'option');
+                  if( $logo_black_header && $logo_color_header ) { ?>
+                    <style>
+                      .Logo {
+                        background: url("<?php echo $logo_black_header["url"] ?>") no-repeat;
+                        background-position: center;
+                        background-size: contain;
+                      }
+                      .menu_div.scroll .Logo {
+                        background: url("<?php echo $logo_color_header["url"] ?>") no-repeat;
+                        background-position: center;
+                        background-size: contain;
+                      }
+                    </style>
                     <a href="<?php echo home_url(); ?>" class="Logo"></a>
+                  <?php } ?>
 
                     <div class="button_mobi_menu">
                         <span></span>
@@ -200,8 +219,21 @@
                         ?>  
 
                         <div class="button_header_div">
-                            <a href="#" class="button_0 button_1 log_in align-items-center justify-content-center">Log in</a>
-                            <a href="#" class="button_0 button_1 sign_up align-items-center justify-content-center">Sign up</a>
+
+                          <?php 
+                          $header_button_left_text = get_field('header_button_left_text', 'option');
+                          $header_button_left_link = get_field('header_button_left_link', 'option');
+                          if($header_button_left_text && $header_button_left_link ){ ?>
+                            <a href="<?php echo $header_button_left_link; ?>" class="button_0 button_1 log_in align-items-center justify-content-center"><?php echo $header_button_left_text; ?></a>
+                          <?php } ?>
+
+                          <?php 
+                          $header_button_right_text = get_field('header_button_right_text', 'option');
+                          $header_button_right_link = get_field('header_button_right_link', 'option');
+                          if($header_button_right_text && $header_button_right_link ){ ?>
+                            <a href="<?php echo $header_button_right_link; ?>" class="button_0 button_1 sign_up align-items-center justify-content-center"><?php echo $header_button_right_text; ?></a>
+                          <?php } ?>
+
                         </div>
                     </ul>
 
