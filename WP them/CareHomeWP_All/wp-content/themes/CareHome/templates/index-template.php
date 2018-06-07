@@ -749,15 +749,15 @@ get_header();
                     
                 <a href="<?php echo the_permalink(); ?>" class="col card_blog card_blog_<?php echo $count_while; ?>">
                     <div class="head_card_blog">
-                        <?php echo the_field('short_description_of_the_article'); ?>
+                        <?php the_title(); ?>
                         <span class="go_iner_blog">
                             <i class="fa fa-angle-right"></i>
                         </span>
                     </div>
                     <div class="mid_card_blog">
-                        <div class="title">
-                            <?php the_title(); ?>
-                        </div>
+                        <!-- <div class="title">
+                            
+                        </div> -->
                         <div class="date">
                             <?php echo get_the_date('m.d.Y'); ?>
                         </div>

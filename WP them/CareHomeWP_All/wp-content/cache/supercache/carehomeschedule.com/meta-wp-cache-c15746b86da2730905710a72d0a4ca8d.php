@@ -1,0 +1,1 @@
+<?php die(); ?>{"headers":{"Vary":"Vary: Cookie","Last-Modified":"Last-Modified: Thu, 07 Jun 2018 08:03:14 GMT","Content-Type":"Content-Type: text\/html; charset=\"UTF-8\""},"uri":"carehomeschedule.com\/","blog_id":1,"post":10,"key":"carehomeschedule.com80\/84ed662f25fc0d6e12a9ff8fb11b3546"}

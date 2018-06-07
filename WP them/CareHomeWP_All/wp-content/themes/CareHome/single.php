@@ -35,9 +35,22 @@
                     <div class="col-6 share">
                         Share: 
                         <div class="social">
-                            <a href="#"><i class="fa fa-facebook-square"></i></a>
+                            <!-- <a href="#"><i class="fa fa-facebook-square"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin-square"></i></a>
+                            <a href="#"><i class="fa fa-linkedin-square"></i></a> -->
+							<?php echo(do_shortcode ('[DISPLAY_ULTIMATE_SOCIAL_ICONS]')); ?>
+							<style>
+							.social .sfsi_tool_tip_2, .tool_tip {
+								padding: 5px;
+							}
+							.social .fb_tool_bdr, .social .gpls_tool_bdr, .social .linkedin_tool_bdr, .social .printst_tool_bdr, .social .twt_tool_bdr {
+								left: calc(50% + 9px);
+							}
+							.sfsi_inside:last-child {
+								margin-bottom: 0px!important;
+								clear: both;
+							}
+							</style>
                         </div>
                     </div>
                 </div>
@@ -83,15 +96,16 @@
                         
                     <a href="<?php echo the_permalink(); ?>" class="col card_blog card_blog_<?php echo $count_while; ?>">
                         <div class="head_card_blog">
-                            <?php echo the_field('short_description_of_the_article'); ?>
+                            <?php  // echo the_field('short_description_of_the_article'); ?>
+                            <?php the_title(); ?>
                             <span class="go_iner_blog">
                                 <i class="fa fa-angle-right"></i>
                             </span>
                         </div>
                         <div class="mid_card_blog">
-                            <div class="title">
-                                <?php the_title(); ?>
-                            </div>
+                            <!-- <div class="title">
+                                
+                            </div> -->
                             <div class="date">
                                 <?php echo get_the_date('m.d.Y'); ?>
                             </div>

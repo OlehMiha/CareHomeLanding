@@ -68,6 +68,42 @@ ExpiresByType text/javascript           "access plus 1 month"
 
 # если не используется ETag, тогда его отключаем для сокращения HTTP заголовков
 FileETag None
+
+# BEGIN хотлинкинга 
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTP_REFERER} !^http://(.+\.)?carehomeschedule\.com/ [NC] RewriteCond %{HTTP_REFERER} !^$
+RewriteRule .*\.(jpe?g|gif|bmp|png)$ /images/nohotlink.jpg [L]
+</IfModule>
+# END хотлинкинга
+
+# BEGIN Hide console URL
+<IfModule mod_rewrite.c>
+RewriteEngine On
+  
+RewriteRule ^carehome_my_admin/?$ /wp-login.php?zjz5xeohrwvs1ei4ui [R,L]
+  
+RewriteCond %{HTTP_COOKIE} !^.*wordpress_logged_in_.*$
+RewriteRule ^carehome_my_admin/?$ /wp-login.php?zjz5xeohrwvs1ei4ui&redirect_to=/wp-admin/ [R,L]
+  
+RewriteRule ^carehome_my_admin/?$ /wp-admin/?zjz5xeohrwvs1ei4ui [R,L]
+  
+RewriteCond %{SCRIPT_FILENAME} !^(.*)admin-ajax\.php
+RewriteCond %{HTTP_REFERER} !^(.*)carehomeschedule.com/wp-admin
+RewriteCond %{HTTP_REFERER} !^(.*)carehomeschedule.com/wp-login\.php
+RewriteCond %{HTTP_REFERER} !^(.*)carehomeschedule.com/carehome_my_admin
+RewriteCond %{QUERY_STRING} !^zjz5xeohrwvs1ei4ui
+RewriteCond %{QUERY_STRING} !^action=logout
+RewriteCond %{QUERY_STRING} !^action=rp
+RewriteCond %{QUERY_STRING} !^action=postpass
+RewriteCond %{HTTP_COOKIE} !^.*wordpress_logged_in_.*$
+RewriteRule ^.*wp-admin/?|^.*wp-login\.php /not_found [R,L]
+  
+RewriteCond %{QUERY_STRING} ^loggedout=true
+RewriteRule ^.*$ /wp-login.php?zjz5xeohrwvs1ei4ui [R,L]
+</IfModule>
+# END Hide console URL
+
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On

@@ -1,0 +1,81 @@
+********************************************************************************
+DUPLICATOR-LITE PACKAGE-LOG: 06.06.2018 08:26
+NOTICE: Do NOT post to public sites or forums 
+********************************************************************************
+VERSION:	1.2.38
+WORDPRESS:	4.9.6
+PHP INFO:	7.1.18 | SAPI: cgi-fcgi
+SERVER:		Apache 
+PHP TIME LIMIT: (0) no time limit imposed 
+PHP MAX MEMORY: 2048M (96M default) 
+MEMORY STACK: 16MB 
+
+********************************************************************************
+DATABASE:
+********************************************************************************
+BUILD MODE:   MYSQLDUMP
+MYSQLTIMEOUT: 5000
+MYSQLDUMP:    Is Supported 
+FILTERED: [] 
+RESPONSE: mysqldump: [Warning] Using a password on the command line interface can be insecure.
+ 
+TABLES: total:13 | filtered:0 | create:13 
+SQL CREATED: 20180606_carehome_eda0b285cf5291c82766180606082637_database.sql 
+SQL FILE SIZE: 807.4KB (826777) 
+SQL FILE TIME: 2018-06-06 08:26:43 
+SQL RUNTIME: 0.33 sec. 
+
+******************************************************************************** 
+ARCHIVE (ZIP): 
+******************************************************************************** 
+ARCHIVE DIR:  /usr/www/users/carehoz 
+ARCHIVE FILE: 20180606_carehome_eda0b285cf5291c82766180606082637_archive.zip 
+FILTERS: *OFF* 
+DIRS:
+	not set 
+FILES:
+	not set 
+EXTS:  not set 
+---------------------------------------- 
+COMPRESSING 
+SIZE:	46.09MB 
+STATS:	Dirs 256 | Files 2,313 
+SQL ADDED: 20180606_carehome_eda0b285cf5291c82766180606082637_database.sql 
+ZipArchive Object
+(
+    [status] => 0
+    [statusSys] => 0
+    [numFiles] => 2569
+    [filename] => /usr/www/users/carehoz/wp-snapshots/tmp/20180606_carehome_eda0b285cf5291c82766180606082637_archive.zip
+    [comment] => 
+)
+ 
+COMPRESSION RESULT: '1' 
+COMPRESSED SIZE: 18.09MB 
+ARCHIVE RUNTIME: 2.77 sec. 
+MEMORY STACK: 16MB 
+
+******************************************************************************** 
+MAKE INSTALLER: 
+******************************************************************************** 
+Build Start 
+Build Finished 
+Preping for use 
+PACK SIZE:  
+Template parsed with new data 
+Complete [/usr/www/users/carehoz/wp-snapshots/tmp/20180606_carehome_eda0b285cf5291c82766180606082637_installer.php] 
+Added to archive 
+
+******************************************************************************** 
+INTEGRITY CHECKS: 
+******************************************************************************** 
+SQL File: 807.4KB 
+Installer File: 445.87KB 
+Archive File: 18.09MB  
+
+********************************************************************************
+RECORD ID:[1]
+TOTAL PROCESS RUNTIME: 3.47 sec.
+PEAK PHP MEMORY USED: 18MB
+DONE PROCESSING => 20180606_carehome 06.06.2018 08:26
+ 
