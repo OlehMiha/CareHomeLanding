@@ -244,7 +244,6 @@ h1 {
   max-width: 1400px;
 }
 .menu_div {
-  width: calc(100% - 214px);
   position: fixed;
   width: 100%;
   height: 80px;
@@ -304,7 +303,7 @@ h1 {
     background-size: contain;
 }
 .menu_div.active {
-  background: #eff2f5;
+  background: #363636;
   height: auto;
   padding-bottom: 10px;
   -webkit-transition: all .5s;
@@ -312,6 +311,9 @@ h1 {
   -ms-transition: all .5s;
   -o-transition: all .5s;
   transition: all .5s;
+}
+.menu_div.scroll.active {
+  background: #eff2f5;
 }
 .menu_div.scroll .menu_top li a {
   color: rgb(37, 37, 37);
@@ -341,6 +343,7 @@ h1 {
 }
 
 .menu_top {
+  width: calc(100% - 214px);
   height: 100%;
   padding-left: 36px;
 
@@ -419,6 +422,9 @@ h1 {
   -moz-transition: .25s ease-in-out;
   -o-transition: .25s ease-in-out;
   transition: .25s ease-in-out;
+}
+.menu_div.scroll .button_mobi_menu span {
+  background: rgb(37, 37, 37);
 }
 
 .button_mobi_menu  span:nth-child(1) {
@@ -1372,7 +1378,7 @@ section ul li:before {
   border-radius: 5px;
   background-color: #fff;
   max-width: 358px;
-  min-height: 336px;
+  min-height: 310px;
 }
 .card_blog_1 .head_card_blog {
   background: url('../img/blog_1.jpg') no-repeat;
@@ -1452,7 +1458,7 @@ section ul li:before {
 
 
 .mid_card_blog {
-  padding: 20px 30px;
+  padding: 30px;
 }
 
 .mid_card_blog .title {
@@ -1668,7 +1674,10 @@ section ul li:before {
   background-position: center;
 }
 .social {
-  margin-top: -2px;
+   margin-top: -18px;
+   margin-bottom: 10px;
+   min-width: 90px;
+   height: 16px;
 }
 .social a {
   color: #4a90e2;
@@ -1769,7 +1778,7 @@ section ul li:before {
   max-width: 477px;
   padding: 50px;
   padding-bottom: 62px;
-  margin-bottom: -350px;
+  margin-bottom: -590px;
   margin-left: 3px;
 }
 .form_request_page h1 {
@@ -1803,7 +1812,8 @@ section ul li:before {
 /*Request page Block 11 */
 
 .block_11 {
-  height: 811px;
+  height: 950px;
+  padding-top: 200px;
 }
 .block_11 > .container,
 .block_11 > .container > .row {
@@ -1995,9 +2005,10 @@ input.form_input_0:focus:required:invalid {
   margin-top: 100px;
 }
 .modal .modal-dialog_2 {
-  max-width: 530px;
-  margin-top: 100px;
+  max-width: 750px;
+  margin-top: (50% - 250px);
 }
+
 .modal-body_1 {    
   padding: 30px 20px;
   padding-right: 10px;
@@ -2038,7 +2049,7 @@ input.form_input_0:focus:required:invalid {
   text-align: left;
 }
 .custom_scrollbar {
-  height: 300px;
+  height: 400px;
   overflow: auto;
 }
 

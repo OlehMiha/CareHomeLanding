@@ -92,6 +92,9 @@
     .menu_div.scroll .Logo {
         margin-top: 12px;
     }
+    .social {
+        margin-bottom: 8px;
+    }
 }
 
 /* Экстрабольшие девайсы (большие десктопы, >= 1200px) */
@@ -136,6 +139,7 @@
     }
     .menu_top {
         width: 100%;
+        padding-left: 0;
         margin: 0;
         margin-top: 20px;
     }
@@ -177,6 +181,10 @@
     }
     .store_bot a.apple_store {
         margin-left: 10px;
+    }
+
+    .social {
+        margin-bottom: 6px;
     }
 }
 @media only screen and (max-width: 1050px) { 
@@ -424,6 +432,18 @@
         margin-bottom: 0;
     }
 
+    .social {
+        margin-bottom: 0px;
+    }
+
+    .modal .modal-dialog_2 {
+          max-width: 100%;
+          margin: 0 auto;
+          margin-top: 30px;
+        }
+        .custom_scrollbar {
+          height: 300px;
+        }
 }
 
 /* Малые девайсы («ландшафтные телефоны», <= 575px) */

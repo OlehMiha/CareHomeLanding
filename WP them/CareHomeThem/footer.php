@@ -66,6 +66,9 @@
 			 		if($(this).attr('href')[0] == "#"){
 			 			document.location.href = '<?php echo home_url(); ?>' + $(this).attr('href');
 			 		}
+			 		else {
+			 			document.location.href = $(this).attr('href');
+			 		}
 			 	});
 			});
 		</script>

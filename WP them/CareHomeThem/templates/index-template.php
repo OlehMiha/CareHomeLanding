@@ -322,7 +322,7 @@ get_header();
                         <?php } ?>
 
                         <?php if( $title_bot_block_4 = get_field('title_bot_block_4') ) { ?>
-                            <p class="title_bot"><?php echo $title_block_4; ?></p>
+                            <p class="title_bot"><?php echo $title_bot_block_4; ?></p>
                         <?php } ?>
                         </div>
                     <?php } ?>
