@@ -2006,7 +2006,8 @@ input.form_input_0:focus:required:invalid {
 }
 .modal .modal-dialog_2 {
   max-width: 750px;
-  margin-top: (50% - 250px);
+  margin: 0 auto;
+  top: calc(50% - 250px);
 }
 
 .modal-body_1 {    
@@ -2049,7 +2050,7 @@ input.form_input_0:focus:required:invalid {
   text-align: left;
 }
 .custom_scrollbar {
-  height: 400px;
+  max-height: 400px;
   overflow: auto;
 }
 

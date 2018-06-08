@@ -15,3 +15,12 @@
 .customize-support .menu_div.scroll {
     top: 32px;
 }
+
+
+/* Contact form 7 */
+.wpcf7-form div.wpcf7-response-output {
+    margin: 10px 0 -50px 0px;
+}
+span.wpcf7-not-valid-tip {
+    text-align: left;
+}	

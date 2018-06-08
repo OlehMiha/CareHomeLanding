@@ -47,11 +47,24 @@ get_header();
                         <?php if( $title_header_block = get_field('title_header_block') ) { ?>
                             <h1><?php echo $title_header_block; ?></h1>
                         <?php } ?>
-                        <div class="contacts_form">
+                        <div id="contacts_form_request_page" class="contacts_form">
 
                         <?php if( $contact_form_7_code = get_field('contact_form_7_code') ) { ?>
                             <?php echo (do_shortcode($contact_form_7_code)); ?>
                         <?php } ?>
+
+                        
+                        <?php 
+                        $num_plen = 1;
+                        if($_GET["plan"])
+                            $num_plen = $_GET["plan"] - 1;
+                        ?>
+                        <script>
+                        (jQuery)(document).ready(function($){ 
+                            $("#contacts_form_request_page .wpcf7-select option:eq(<?php echo $num_plen; ?>)").attr('selected','true');
+                        });
+                        </script>
+
                         </div>
                     </div>
                 </div>
