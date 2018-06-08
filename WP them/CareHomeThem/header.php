@@ -195,7 +195,6 @@
                         <span></span>
                     </div>
 
-                    <ul class="menu_top row align-items-center justify-content-between">
                     <ul class="menu_top row no-gutters align-items-center justify-content-between">
                         <?php
                             $masiv = array(
