@@ -900,15 +900,16 @@ section ul li.animated {
    opacity: 1;
 }
 section ul li:before {
-   position: absolute;
-   top: 11px;
-   left: -15px;
+   position: static;
+   display: inline-block;
    content: "";
-   display: block;
    width: 7px;
    height: 7px;
    border-radius: 50%;
    background: #4a90e2;
+   margin-right: 6px;
+   margin-bottom: 3px;
+   margin-left: 2px;
 }
 
 .how_it_works_div_l {
@@ -1632,6 +1633,28 @@ section ul li:before {
   letter-spacing: 0.2px;
   color: #0d094c;
 }
+.contacts_form .bot_text_form a{
+  color: #0d094c;
+  text-decoration: underline;
+}
+.contacts_form .bot_text_form a:hover{
+  text-decoration: none;
+}
+.contacts_form .bot_text_form_polit {
+  margin: 0 -10px;
+  margin-top: 5px;
+  font-weight: 300;
+  letter-spacing: 0.2px;
+  color: #0d094c;
+  font-size: 0.850em;
+}
+.contacts_form .bot_text_form_polit a{
+  color: #0d094c;
+  text-decoration: underline;
+}
+.contacts_form .bot_text_form_polit a:hover{
+  text-decoration: none;
+}
 
 
 .contacts_right_div {
@@ -2053,6 +2076,56 @@ input.form_input_0:focus:required:invalid {
   max-height: 400px;
   overflow: auto;
 }
+
+
+.modal ul {
+    padding-top: 6px;
+    padding-bottom: 32px;
+}
+.modal ul li {
+   position: relative;
+   color: #0d094c;
+   font-size: 1.125em;
+   letter-spacing: -0.15px;
+   padding-left: 15px;
+   line-height: 30px;
+   text-align: left;
+}
+
+.modal ul li:before {
+   position: absolute;
+   top: 12px;
+   left: 0px;
+   content: "";
+   display: block;
+   width: 7px;
+   height: 7px;
+   border-radius: 50%;
+   background: #0d094c;
+}
+.modal h6 {
+    text-align: left;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.125em;
+}
+.modal .table {
+   border: 1px solid #ccc;
+} 
+.modal .table thead th {
+    text-align: center;
+    font-size: 0.850em;
+    font-weight: 600;
+}
+.modal .table td, .modal .table th {
+    padding: .25rem;
+    font-size: 0.750em;
+    vertical-align: top;
+    border: 1px solid #dee2e6;
+    text-align: left;
+}
+
 
 
 /* Animate */
