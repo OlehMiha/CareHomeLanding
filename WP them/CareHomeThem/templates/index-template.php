@@ -772,6 +772,9 @@ get_header();
                 <?php wp_reset_postdata(); // reset the query ?>
 
             </div>
+            <div class="text-center">
+                <a href="<?php echo home_url(); ?>/blog/" class="button_0 button_2 align-items-center justify-content-center">All news</a>
+            </div>
         </div>
     </section>
 

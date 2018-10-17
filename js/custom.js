@@ -10,6 +10,8 @@
 
 
 (jQuery)(document).ready(function($){ 
+//Для мобильного 
+ 	var width_el = Number(document.documentElement.clientWidth);
 //Отключить выделение
     window.oncontextmenu = function() {
         return false;
@@ -97,6 +99,53 @@ $('.click_tile_js').on('click', function (e) {
 });
 
 
+
+
+	var BrowserDetect = {
+	init: function () {
+		this.browser = this.searchString(this.dataBrowser) || "Other";
+		this.version = this.searchVersion(navigator.userAgent) || this.searchVersion(navigator.appVersion) || "Unknown";
+	},
+	searchString: function (data) {
+		for (var i = 0; i < data.length; i++) {
+			var dataString = data[i].string;
+			this.versionSearchString = data[i].subString;
+
+			if (dataString.indexOf(data[i].subString) !== -1) {
+				return data[i].identity;
+			}
+		}
+	},
+	searchVersion: function (dataString) {
+		var index = dataString.indexOf(this.versionSearchString);
+		if (index === -1) {
+			return;
+		}
+
+		var rv = dataString.indexOf("rv:");
+		if (this.versionSearchString === "Trident" && rv !== -1) {
+			return parseFloat(dataString.substring(rv + 3));
+		} else {
+			return parseFloat(dataString.substring(index + this.versionSearchString.length + 1));
+		}
+	},
+
+	dataBrowser: [
+		{string: navigator.userAgent, subString: "Edge", identity: "MS Edge"},
+		{string: navigator.userAgent, subString: "MSIE", identity: "Explorer"},
+		{string: navigator.userAgent, subString: "Trident", identity: "Explorer"},
+		{string: navigator.userAgent, subString: "Firefox", identity: "Firefox"},
+		{string: navigator.userAgent, subString: "Opera", identity: "Opera"},  
+		{string: navigator.userAgent, subString: "OPR", identity: "Opera"},  
+
+		{string: navigator.userAgent, subString: "Chrome", identity: "Chrome"}, 
+		{string: navigator.userAgent, subString: "Safari", identity: "Safari"}       
+	]
+	};
+
+	BrowserDetect.init();
+
+
 //Меню топ : скрол анимация
     var h = $(window).height();
  
@@ -146,11 +195,6 @@ $('.click_tile_js').on('click', function (e) {
                 $(this).find('li').removeClass('animated fadeIn');
             }
         });
-
-
-
-
-
 
 
         $('.mov_next_fadeInLeft').each(function(){
@@ -215,9 +259,30 @@ $('.click_tile_js').on('click', function (e) {
             }
         }); 
     }
+	
+	
+	if(BrowserDetect.browser != "Explorer"){
+		go_animated_scroll();
+	} else {
+		$('ul li').css('opacity',1);
+		$('.mov').css('opacity',1);
+		$('.mov_p p').css('opacity',1);
+		$('.iner_tile').css('opacity',1);
+		$('.mov_tile_js').css('opacity',1);
+		$('.mov_tile_js .iner_tile').css('opacity',1);
+		$('.mov_div div').css('opacity',1);
+		$('.footer_div .row').css('height','120px');
+		$('.footer_div_bot .row').css('height','40px');
 
-    go_animated_scroll();
 
+
+	   if(width_el <= 1180){
+	      $('.menu_div .container').css('position','relative');
+	      $('.menu_div .container').css('top','-15px');
+	   }
+	}
+	
+	
     $(window).scroll(function(){
         if ( ($(this).scrollTop()) > 0 ) {
             $(".menu_div").addClass('scroll');
@@ -226,18 +291,12 @@ $('.click_tile_js').on('click', function (e) {
             $(".menu_div").removeClass('scroll');
         }
 
-        go_animated_scroll();
+        if(BrowserDetect.browser != "Explorer"){
+			go_animated_scroll();
+		}
     });
     
 
-//Для мобильного 
-    var width_el = Number(document.documentElement.clientWidth);
-    if(width_el <= 768){
-        
-    }
-
-
-	
 	
 
 //Формы  

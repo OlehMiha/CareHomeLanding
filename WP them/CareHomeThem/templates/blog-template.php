@@ -1,5 +1,9 @@
 <?php 
+/*
+ * Template name: Blog page
+ */
 get_header();
+
 ?>
     <section class="header_none_bac_menu">
     </section>
@@ -63,5 +67,6 @@ get_header();
             </div>
         </div>
     </section>
+    
     
 <?php get_footer(); ?>

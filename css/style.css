@@ -666,6 +666,7 @@ h1 {
 }
 .block_2_iner_absolute .col {
    max-width: 540px;
+   min-width: calc(100% - 130px);
 }
 .block_2_iner_absolute.left_block_2_iner .col {
    margin-right: 100px;
@@ -1224,7 +1225,8 @@ section ul li:before {
 }
 .price_plan {
   position: relative;
-  max-width: 357px;
+  max-width: 358px;
+  min-width: 29.1%;
 }
 
 .head_price {
@@ -1379,7 +1381,9 @@ section ul li:before {
   border-radius: 5px;
   background-color: #fff;
   max-width: 358px;
+  min-width: 29.1%;
   min-height: 310px;
+  margin-bottom: 30px;
 }
 .card_blog_1 .head_card_blog {
   background: url('../img/blog_1.jpg') no-repeat;
@@ -1647,6 +1651,7 @@ section ul li:before {
   letter-spacing: 0.2px;
   color: #0d094c;
   font-size: 0.850em;
+  text-align: left;
 }
 .contacts_form .bot_text_form_polit a{
   color: #0d094c;
@@ -2119,6 +2124,59 @@ input.form_input_0:focus:required:invalid {
     font-weight: 600;
 }
 .modal .table td, .modal .table th {
+    padding: .25rem;
+    font-size: 0.750em;
+    vertical-align: top;
+    border: 1px solid #dee2e6;
+    text-align: left;
+}
+
+
+.content_iner_page {
+	max-width: 800px;
+	margin: 0 auto;
+}
+.content_iner_page ul {
+    padding-top: 6px;
+    padding-bottom: 32px;
+}
+.content_iner_page ul li {
+   position: relative;
+   color: #0d094c;
+   font-size: 1.125em;
+   letter-spacing: -0.15px;
+   padding-left: 15px;
+   line-height: 30px;
+   text-align: left;
+}
+
+.content_iner_page ul li:before {
+   position: absolute;
+   top: 12px;
+   left: 0px;
+   content: "";
+   display: block;
+   width: 7px;
+   height: 7px;
+   border-radius: 50%;
+   background: #0d094c;
+}
+.content_iner_page h6 {
+    text-align: left;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.125em;
+}
+.content_iner_page .table {
+   border: 1px solid #ccc;
+} 
+.content_iner_page .table thead th {
+    text-align: center;
+    font-size: 0.850em;
+    font-weight: 600;
+}
+.content_iner_page .table td, .content_iner_page .table th {
     padding: .25rem;
     font-size: 0.750em;
     vertical-align: top;
